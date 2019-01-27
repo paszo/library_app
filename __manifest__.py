@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "library_app",
+    'name': "Library Management Application",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Manage library book catalogue""",
 
     'description': """
-        Long description of module's purpose
+        Library books members and book borrowing
     """,
 
-    'author': "My Company",
+    'author': "Daniel Reis",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -32,4 +31,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'application': True,
+    'installable': True,
 }

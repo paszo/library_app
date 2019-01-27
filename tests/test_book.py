@@ -1,17 +1,18 @@
 from odoo.tests.common import TransactionCase
 
+
 class TestBook(TransactionCase):
 
     def setUp(self, *args, **kwargs):
-        result = super().setUp(*args, **kwargs)
+        result = super(TestBook, self).setUp(*args, **kwargs)
         # Prepare environment with the Admin user
         user_admin = self.env.ref('base.user_admin')
         self.env = self.env(user=user_admin)
-        # Set up test data
+        # Setup test data
         self.Book = self.env['library.book']
         self.book_ode = self.Book.create({
             'name': 'Odoo Development Essentials',
-            'isbn': '879-1-78439-279-6'})
+            'isbn': '978-1-78439-279-6'})
         return result
 
     def test_create(self):

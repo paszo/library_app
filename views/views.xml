@@ -41,6 +41,7 @@
     -->
 
     <!-- Top menu item -->
+    <menuitem id="menu_library" name="Library"/>
     <!--
     <menuitem name="library_app" id="library_app.menu_root"/>
     -->

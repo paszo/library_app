@@ -15,6 +15,7 @@
     </record>
     -->
 
+
     <!-- actions opening views on models -->
     <!--
     <record model="ir.actions.act_window" id="library_app.action_window">
@@ -41,7 +42,7 @@
     -->
 
     <!-- Top menu item -->
-    <menuitem id="menu_library" name="Library"/>
+
     <!--
     <menuitem name="library_app" id="library_app.menu_root"/>
     -->

@@ -25,6 +25,7 @@
     'data': [
         'security/library_security.xml',
         'security/ir.model.access.csv',
+        'views/library_menu.xml',
         'views/views.xml',
         'views/templates.xml',
     ],

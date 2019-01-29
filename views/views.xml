@@ -56,6 +56,24 @@
       </field>
     </record>
 
+    <record id="view_search_book" model="ir.ui.view">
+      <field name="name">Book Filters</field>
+      <field name="model">library.book</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="publisher_id"/>
+          <filter name="filter_inactive"
+                  string="Inactive"
+                  domain="[('active','=',False)]"/>
+          <filter name="filter_active"
+                  string="Active"
+                  domain="[('active','=',True)]"/>
+        </search>
+      </field>
+    </record>
+
+
+
 
 
 

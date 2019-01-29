@@ -14,7 +14,21 @@
       </field>
     </record>
     -->
+    <menuitem id="library_menu" name="Library"/>
 
+
+    <act_window id="action_library_book"
+      name="Library Books"
+      res_model="library.book"
+      view_mode="tree,form"
+    />
+
+    <!-- Menu item to open the Book list -->
+    <menuitem id="menu_library_book"
+      name="Books"
+      parent="library_menu"
+      action="action_library_book"
+    />
 
     <!-- actions opening views on models -->
     <!--

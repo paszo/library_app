@@ -4,10 +4,9 @@ from odoo import http
 class Books(http.Controller):
     @http.route('/library/books', auth='user')
     def list(self, **kwargs):
-        Book = http.requerst.env['library.book']
+        Book = http.request.env['library.book']
         books = Book.search([])
-        return http/request.render(
-            'library_app.book_list_template', {'books': books})
+        return http.request.render('library_app.book_list_template', {'books': books})
 # class LibraryApp(http.Controller):
 #     @http.route('/library_app/library_app/', auth='public')
 #     def index(self, **kw):

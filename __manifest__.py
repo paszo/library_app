@@ -32,6 +32,7 @@
     'demo': [
         'data/res.partner.csv',
         'data/library.book.csv',
+        'data/book_demo.xml',
         'demo/demo.xml',
     ],
     'application': True,

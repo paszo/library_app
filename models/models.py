@@ -75,6 +75,10 @@ class Book(models.Model):
             'publisher_id', #field for this in the related model
             string='Published Books')
 
+        book_ids = fields.Many2many(
+            'library.book',
+            string='Authored Books')
+
 
 
 # class library_app(models.Model):

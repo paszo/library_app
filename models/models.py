@@ -68,6 +68,14 @@ class Book(models.Model):
                 '%s is an invalid ISBN' % book.isbn)
             return True
 
+    class Partner(models.Model):
+        _inherit = 'res.partner'
+        published_book_ids = fields.One2many(
+            'library.book', #related model
+            'publisher_id', #field for this in the related model
+            string='Published Books')
+
+
 
 # class library_app(models.Model):
 #     _name = 'library_app.library_app'

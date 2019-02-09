@@ -92,6 +92,12 @@ class Book(models.Model):
     def _search_publisher_country(self, operator, value):
         return [('publisher_id.country_id', operator, value)]
 
+    publisher_country_related = fields.Many2one(
+        'res.country',
+        string='Publisher Country (related)',
+        related='publisher_id.country_id',
+    )
+
 
 
 

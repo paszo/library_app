@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 from odoo.exceptions import Warning
+from odoo.exceptions import ValidationError
 
 class Book(models.Model):
     _name = 'library.book'
@@ -106,6 +107,14 @@ class Book(models.Model):
         'CHECK (date_published <= current_date)',
         'Publication date must not be in the future.'),
     ]
+
+    @api.constrains('isbn')
+    def _constrain_isbn_valid(self):
+        for book in self:
+            if book.isbn and not book._check_isbn():
+                raise ValidationError(
+                '%s is an invalid ISBN' % book.isbn)
+
 
 
 

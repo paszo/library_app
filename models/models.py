@@ -98,6 +98,15 @@ class Book(models.Model):
         related='publisher_id.country_id',
     )
 
+    _sql_constraints = [
+        ('library_book_name_date_uq',
+        'UNIQUE (name, date_published)',
+        'Book title and publication date must be unique.'),
+        ('library_book_check_date',
+        'CHECK (date_published <= current_date)',
+        'Publication date must not be in the future.'),
+    ]
+
 
 
 

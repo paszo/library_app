@@ -68,6 +68,15 @@ class Book(models.Model):
                 '%s is an invalid ISBN' % book.isbn)
             return True
 
+    category_id = category_id = fields.Many2one('library.book.category', string='Category')
+
+
+
+
+
+
+
+
     class Partner(models.Model):
         _inherit = 'res.partner'
         published_book_ids = fields.One2many(

@@ -98,6 +98,10 @@ class Book(models.Model):
             'parent_id',
             'Subcategories')
 
+        highlighted_id = fields.Reference(
+            [('library.book', 'Book'), ('res.partner', 'Author')],
+            'Category Highlight',)
+
 
 
 
